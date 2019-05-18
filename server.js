@@ -3,8 +3,8 @@ const app = express();
 
 const quotes = require("./quotes.json");
 
-app.get("/", function(request, response) {
-  response.send("Quote Server.  Add new quotes via HTTP!");
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/index.html');
 });
 
 app.get("/quotes", function(request, response){
