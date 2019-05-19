@@ -4,7 +4,7 @@ const app = express();
 const quotes = require("./quotes.json");
 
 app.get('/', function(request, response) {
-  response.send('Try /quotes/2 to get one by id')
+  response.send('/quotes/17 should return one quote, by id')
 });
 
 app.get("/quotes", function(request, response){
