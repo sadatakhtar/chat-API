@@ -12,3 +12,14 @@ app.get("/quotes", function(request, response){
 });
 
 app.listen(process.env.PORT);
+
+app.get('/quotes/:id', (req, res) => {
+  const {id} = req.params
+  const myQuotes = quotes.find(e => e.id == id);
+  if(myQuotes){
+    res.json(myQuotes);
+    
+  }else{
+    res.send('not found!');
+  }
+})
