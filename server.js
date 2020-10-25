@@ -54,7 +54,7 @@ app.get('/messages/latest', (req, res) => {
 //Display homepage
 app.get("/", function (request, response) {
   //response.sendFile(__dirname + "/index.html");
-  response.send("Welcome to Sadat's chat server)
+  response.send("Welcome to Sadat's chat server");
 });
 //Post a new message
 app.post('/messages', (req, res) => {
